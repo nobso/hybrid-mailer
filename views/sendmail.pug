@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  .main.container
+    .row
+        .col.col-sm-6.offset-sm-3.overlay-content
+            h1 E-Mail Campaign
+            if error
+                span.fail There is a validation error, go back to fix. 
+            else
+                if result == true
+                    span.success The mail is successfully sent.
+                else
+                    span.fail Failed, the mail is not sent. Try again.
+            div.pt10
+                a.btn.btn-primary.btn-lg.active(href="/" role="button" aria-pressed="true") Go back

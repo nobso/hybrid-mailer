@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(http-equiv="content-language" content="en-AU")
+    meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="description" content="We are here for you, our world-wide team of specialists have got you covered.")
+    title=title
+    link(rel="stylesheet", href="/css/style.min.css")
+    
+  body(class="mailer container")
+    div.overlay
+      <a href="#" id="close">&times;</a>
+      div.overlay-content
+        <img id="loader" src="/images/loader.gif" alt="" />
+    block content
+    block scripts
+       script(src="/js/scripts.min.js")

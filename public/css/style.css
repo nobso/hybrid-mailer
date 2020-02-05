@@ -1,0 +1,97 @@
+/* generic CSS - starts here */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    padding: 50px;
+}
+
+span {
+    font-size: 0.83em;
+    color: gray;
+}
+
+.mailer .error {
+    border-color: red;
+}
+
+.mailer .pt10 {
+    padding-top: 10px;
+}
+
+.mailer label.req {
+    color: red;
+}
+/* generic CSS - ends here */
+
+/* max-width is equivalent to the Pixel 2 XL width in the landscape mode */
+@media (min-width: 576px) and (max-width: 823px) and (orientation: landscape) {
+    .mailer .offset-sm-3 {
+        margin: 0;
+        width: 0;
+    }
+    .mailer .col-sm-6 {
+        flex: auto;
+        max-width: 100%;
+    }
+}
+
+/* overlay UI > starts here */
+.mailer .overlay {
+    background-color: rgba(248, 249, 250, 0.78);
+    display: none;
+    height: 100%;
+    left: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.mailer .overlay-content {
+    display: block;
+    font-weight: bold;
+    font-size: 1.42em;
+    margin-top: 30px;
+    position: relative;
+    text-align: center;
+    top: 25%;
+    width: 100%;
+    z-index: 2;
+}
+
+.mailer .overlay a {
+    color: #818181;
+    display: block;
+    font-size: 2.54em;
+    padding: 8px;
+    text-decoration: none;
+}
+
+.mailer .overlay a:hover,
+.overlay a:focus {
+    color: #000;
+}
+
+.mailer .overlay #close {
+    font-size: 4.28em;
+    position: absolute;
+    right: 45px;
+    top: 20px;
+}
+
+.mailer span.success {
+    color: green;
+}
+
+.mailer span.fail,
+.mailer span.success {
+    background: beige;
+    display: block;
+    padding: 100px;
+}
+
+.mailer span.fail {
+    color: red;
+}
+/* overlay UI > ends here */

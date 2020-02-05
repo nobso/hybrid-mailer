@@ -1,0 +1,20 @@
+production: &DEFAULT
+    env: production
+    hostname: https://young-brushlands-73025.herokuapp.com/
+    port: 443
+    email:
+        from: Support Team <sureshkm@nobso.com>
+        subject: From siteminder.com
+        mailgun:
+            host: https://api.mailgun.net
+            privateAPIKey: [PLACE HOLDER]
+            domain: [PLACE HOLDER]
+        sendgrid:
+            host: https://api.sendgrid.com
+            privateAPIKey: [PLACE HOLDER] 
+
+development:
+    <<: *DEFAULT
+    env: development
+    hostname: localhost
+    port: 3000

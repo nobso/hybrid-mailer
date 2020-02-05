@@ -1,0 +1,35 @@
+extends layout
+
+block content
+  .main.container
+    .row
+        .col.col-sm-6.offset-sm-3
+            h1 E-Mail Campaign
+            div.col.col-sm-4.offset-sm-8 
+                label.req *
+                span  Required fields
+            form(method="POST" action="/sendmail")
+              div.form-group
+                label(for="name") Name 
+                    label.req *
+                input#name.form-control(type="text", placeholder="Enter your name" name="name" aria-label="Enter your name" aria-required="true" required)
+                span Name length should be between 3 and 30
+              div.form-group
+                label(for="email") Email
+                    label.req *
+                input#email.form-control(type="email", placeholder="Enter your email address" name="email"  aria-label="Enter your email address" aria-required="true" required)
+                span Ex: user@example.com
+              div.form-group
+                label(for="cc") CC
+                input#cc.form-control(type="email", placeholder="Enter the CC email address" name="cc"  aria-label="Enter the CC email address")
+                span Ex: user@example.com
+              div.form-group
+                label(for="bcc") BCC
+                input#bcc.form-control(type="email", placeholder="Enter the BCC email address" name="bcc"  aria-label="Enter the BCC email address")
+                span Ex: user@example.com
+              div.form-group
+                label(for="message") Message
+                    label.req *
+                textarea#message.form-control(type="textarea", placeholder="Enter your message" name="message", cols="500", rows="5" aria-label="Enter your message" aria-required="true" required)
+                span Message length should be between 100 and 10
+              button.btn.btn-primary(type="submit" aria-label="Send an email") Send

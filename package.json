@@ -1,0 +1,52 @@
+{
+    "name": "mailer",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "start:dev": "DEBUG=mailer:* nodemon ./bin/www",
+        "start": "node ./bin/www",
+        "lint": "eslint --ignore-path .gitignore .",
+        "prettier": "prettier --ignore-path .gitignore --write './**/*.{js,json,css,md}'"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{js,json,css,md}": [
+            "prettier --ignore-path .gitignore --write './**/*.{js,json,css,md}'",
+            "git add ."
+        ]
+    },
+    "dependencies": {
+        "axios": "^0.19.2",
+        "body-parser": "^1.19.0",
+        "bootstrap": "^4.4.1",
+        "debug": "~2.6.9",
+        "express": "~4.16.1",
+        "js-yaml": "^3.13.1",
+        "morgan": "~1.9.1",
+        "node-input-validator": "^4.1.0",
+        "pug": "^2.0.4",
+        "request": "^2.88.0"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.26.7",
+        "eslint": "^6.8.0",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^7.0.1",
+        "gulp-concat": "^2.6.1",
+        "gulp-cssmin": "^0.2.0",
+        "gulp-imagemin": "^7.1.0",
+        "gulp-minify": "^3.1.0",
+        "gulp-nodemon": "^2.4.2",
+        "gulp-rename": "^2.0.0",
+        "gulp-uglify": "^3.0.2",
+        "gulp-uglify-es": "^2.0.0",
+        "husky": "^4.2.1",
+        "lint-staged": "^10.0.7",
+        "nodemon": "^2.0.2",
+        "prettier": "^1.19.1"
+    }
+}
