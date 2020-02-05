@@ -17,4 +17,4 @@ The sequence diagram of Ad Campaign via Email
 
 Data resiliency 
 
-It can be handled by using an in-memory storage like Redis or MemCahed. When both or all the email clients fail, we can store the content in the memory and tell the user that the email will be sent later.
+It can be handled by using an in-memory storage like Redis or MemCached. When both or all the email clients fail, we can store the content in the memory and tell the user that the email will be sent later. Then run automated task to pull the data from the memory and send them.
