@@ -14,3 +14,7 @@ The sequence diagram of Ad Campaign via Email
     1. If the email is sent successfully, the browser will be notified the same
     1. If it fails, the Mailer will ask the SendGrid to retry a given number of times
 1. If all the attempts fail, the browser will be notified
+
+Data resiliency 
+
+It can be handled by using an in-memory storage like Redis or MemCahed. When both or all the email clients fail, we can store the content in the memory and tell the user that the email will be sent later.
