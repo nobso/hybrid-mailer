@@ -1,4 +1,4 @@
-# Simple Mailer
+# Hybrid Mailer
 
 ### Hosted environment
 
